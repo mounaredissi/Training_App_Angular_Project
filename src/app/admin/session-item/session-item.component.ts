@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FakeSessionItemService } from '../FakeSessionItemService';
 
 @Component({
   selector: 'app-session-item',
@@ -8,9 +9,13 @@ import { Component, Input, OnInit } from '@angular/core';
 export class SessionItemComponent implements OnInit {
   alignemnt='left';
   @Input() session:any;
-  constructor() { }
+  constructor(private sessionItemService : FakeSessionItemService) { }
 
   ngOnInit(): void {
+  }
+  onDelete(){
+    console.log(this.session);
+    this.sessionItemService.delete(this.session);
   }
 
 }

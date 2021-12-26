@@ -3,10 +3,11 @@
 <div>prevu le{{session.date}} pendant {{session.duree}} jours à {{session.local}}</div>
 <div>{{session.participants}} Participants</div>
 <div class="tools">
-<a class="delete">
+<a class="delete"  (click)="onDelete()" >
 supression
 </a>
-<a class="inscrire">
-modification
+<a [routerLink]="['../edit', session.id]"
+routerLinkActive="active" class="inscrire">
+Modification
 </a>
 </div>

@@ -1,8 +1,7 @@
 <header>
     <h2>Modifier une session de formation</h2>
     </header>
-    <form #sessionItemForm="ngForm"
-    (ngSubmit)="editSession(sessionItemForm.value)">
+    <form #sessionItemForm="ngForm">
     <ul>
     <li>
     <label for="name">Name</label>
@@ -19,7 +18,7 @@
     required
     [(ngModel)]="session.track" name="track">
     <option *ngFor="let track of tracks"
-    [value]="track">{{track}}</option>
+    [value]="track">{{track}}</option>   
     </select> {{session.track}}
     </li>
     <i>

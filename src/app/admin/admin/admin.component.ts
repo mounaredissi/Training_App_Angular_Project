@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-
+import {FakeSessionItemService} from '../FakeSessionItemService';
 @Component({
   selector: 'app-admin',
+  providers: [FakeSessionItemService],
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.css']
 })
