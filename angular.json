@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "trainingapp"
+  "defaultProject": "trainingapp",
+  "cli": {
+    "analytics": "d249b765-3530-45f6-bedb-09877d03a83f"
+  }
 }
